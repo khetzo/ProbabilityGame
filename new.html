@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controlled Flight Direction Game with Balls</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-balls-container">
+        
+        <div id="game-container">
+            <div id="controller"></div>
+            <div id="game-over" class="game-over">Game Over!</div>
+        </div>
+        <div id="small-balls-container"></div>
+        <div class="stats">
+            <h2>Collision Stats</h2>
+            <ul id="collision-stats">
+                <li>Blue: <span id="blue-count">0</span></li>
+                <li>Green: <span id="green-count">0</span></li>
+                <li>Red: <span id="red-count">0</span></li>
+            </ul>
+            <ul id="total-collision-stats">
+                <li>Total Blue: <span id="total-blue-count">0</span></li>
+                <li>Total Green: <span id="total-green-count">0</span></li>
+                <li>Total Red: <span id="total-red-count">0</span></li>
+            </ul>
+            <div id="game-controls">
+                <h2>Select Color, Set Time, and Start Game</h2>
+                <div>
+                    <input type="radio" id="color-blue" name="ball-color" value="blue">
+                    <label for="color-blue">Blue</label>
+                </div>
+                <div>
+                    <input type="radio" id="color-green" name="ball-color" value="green">
+                    <label for="color-green">Green</label>
+                </div>
+                <div>
+                    <input type="radio" id="color-red" name="ball-color" value="red">
+                    <label for="color-red">Red</label>
+                </div>
+                <div>
+                    <label for="game-time">Set Game Time (seconds): </label>
+                    <input type="number" id="game-time" name="game-time" min="1" value="15">
+                </div>
+                <button id="start-game">Start Game</button>
+            </div>
+        
+        </div>
+        <div id="highest-score-list-evry-15-second" class="winlistBoxCountainer">
+            <h2>Highest Scoring Color</h2>
+            <div id="highest-score-display-list" class="winlistBox"></div>
+        </div>
+    </div>
+ 
+  
+   
+    <script src="script.js"></script>  
+  
+</body>
+</html>
